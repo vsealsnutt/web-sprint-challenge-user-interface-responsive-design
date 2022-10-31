@@ -64,6 +64,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, a, i {
     text-decoration: none;
+    color: rgb(225, 239, 230);
 }
 
 h1 {
@@ -76,14 +77,19 @@ h2 {
 
 h3 {
     font-size: 5rem;
+    padding: 2% 0;
 }
 
 h4 {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 p, a {
-    font-size: 3rem;
+    font-size: 2rem;
+}
+
+a:visited {
+    text-decoration: none;
 }
 
 /* header section */
@@ -94,6 +100,55 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.header-container {
+    background-color: rgb(0, 4, 17, .8);
+}
+
+header div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+
+.title {
+    font-size: 7.5rem;
+}
+
+header nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%
+}
+
+.links {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav a {
+    font-size: 2rem;
+}
+
+.social-media {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: none;
+}
+
+.fa-brands {
+    font-size: 3.5rem;
 }
 
 /* spacer */
@@ -110,37 +165,205 @@ header {
 
 /* menu */
 
-.menu {
-    width: 100%;
-    height: auto;
+.menu-container {
     background-image: url('../img/staff-bartender.jpg');
-    background-color: rgb(0, 4, 17);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.menu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 4, 17, .8);
+}
+
+.menu-sections {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu-section {
+    width: 40%;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    margin: 6% 0;
+}
+
+.first-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.italics {
+    font-size: 2rem;
+    font-style: italic;
+    color: rgb(225, 239, 230);
 }
 
 /* footer section */
 footer {
     width: 100%;
     height: 15vh;
+    background-color: rgb(0, 4, 17);
     padding-top: 2.5vh;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
+.footer-container {
+    max-width: 100%;
+    display: flex;
+}
+
+.email-signup {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+    padding-bottom: 0;
+    font-size: 5rem;
+}
+form {
+    width: 100%;
+}
+
+.form-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.form-items {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.form-items input {
+    width: 70%;
+    font-size: 2.5rem;
+}
+
+button {
+    width: 30%;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.footer-container nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.copyright p {
+    font-size: 1.6rem;
+}
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
-    .header-title {
+    h1 {
+        text-align: center;
+        line-height: 1;
+        padding: 10%;
+        padding-top: 5%;
+        padding-bottom: 3%;
+    }
+
+    .title {
         width: 75%;
         margin: 0 auto;
         text-align: center;
         font-size: 4rem;
     }
 
+    .links {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2%;
+    }
+
     /* menu */
+.menu-container {
+    background-image: none;
+}
+
     .menu {
-        background-image: none;
+        background-color: rgb(225, 239, 230);
+    }
+
+    .menu h2, h3, h4, p {
+        color: rgb(0, 4, 17);
+    }
+
+    .menu h2 {
+        border-bottom: 20px solid rgb(0, 4, 17);
+    }
+
+    .menu-sections {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .menu-section h3 {
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 5px solid rgb(0, 4, 17);
+        margin: 10%;
+        margin-top: 10%;
+        padding: 0 4% 0 4%;
+    }
+
+    .menu-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-item {
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-bottom: 5px solid rgb(0, 4, 17);
+        padding: 4% 0;
+    }
+
+    .first-line {
+        flex-direction: column;
+    }
+
+    .first-line h4 {
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    .menu-item p {
+        margin-top: 1%;
+        margin-bottom: 1%;
     }
 
     /* footer section */
@@ -148,5 +371,48 @@ footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5%;
+    }
+
+    footer nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .email-signup {
+        width: 90%;
+    }
+
+    .form-title {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .form-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        width: 80%;
+    }
+
+    .copyright {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .copyright p {
+        width: 70%;
+        text-align: center;
     }
 }
