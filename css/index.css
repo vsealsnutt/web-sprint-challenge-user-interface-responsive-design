@@ -292,6 +292,7 @@ form {
     justify-content: center;
     align-items: center;
     font-size: 2rem;
+    text-align: center;
 }
 
 .form-items {
@@ -329,11 +330,48 @@ button {
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
-    
+    h1 {
+        text-align: center;
+        line-height: 1;
+        padding: 10%;
+        padding-top: 5%;
+        padding-bottom: 3%;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+
+    header nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2%;
+    }
+
+    .links {
+        flex-direction: column;
+    }
 
     /* gallery section */
     .gallery {
         height: auto;
+        width: 100%;
+    }
+
+    .gallery h2 {
+        padding-top: 2%;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    .food-pics {
+        width: 100%;
     }
     
     /* about us section */
@@ -345,6 +383,7 @@ button {
     .about h2 {
         width: 100%;
         padding-top: 5vh;
+        padding-bottom: 20%;
     }
     
     .about-container .text {
@@ -352,8 +391,15 @@ button {
     }
     
     /* contact us section */
+.contact-container {
+    width: 100%;
+    padding-top: 5vh;
+    padding-bottom: 20%;
+}
+
     .contact h3 {
-        padding-top: 2.5vh;
+        padding-top: 5vh;
+        padding-bottom: 20%;
     }
     
     .info {
@@ -371,7 +417,6 @@ button {
     
     .contacts {
         width: 100%;
-        padding-bottom: 2.5vh;
     }
 
     /* footer section */
@@ -379,5 +424,48 @@ button {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 5%;
+    }
+
+    footer nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .email-signup {
+        width: 90%;
+    }
+
+    .form-title {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .form-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button {
+        width: 80%;
+    }
+
+    .copyright {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .copyright p {
+        width: 70%;
+        text-align: center;
     }
 }
